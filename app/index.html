@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en" ng-app="twittercompApp">
+<head>
+  <meta charset="utf-8">
+  <title>Twitter Competition</title>
+
+  <!-- bower:css -->
+  <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.css" />
+  <!-- endbower -->
+  <link rel="stylesheet" href="/app/css/style.css" />
+
+  <!-- bower:js -->
+  <script src="/bower_components/jquery/dist/jquery.js"></script>
+  <script src="/bower_components/angular/angular.js"></script>
+  <script src="/bower_components/bootstrap/dist/js/bootstrap.js"></script>
+  <script src="/bower_components/underscore/underscore.js"></script>
+  <!-- endbower -->
+  <script src="/app/js/controllers.js"></script>
+
+</head>
+<body ng-space="stop()" ng-controller="TwitterUserCtrl">
+
+  <div class="container">
+
+    <button type="button" ng-click='start()' class="btn btn-primary btn-lg center-block">Start</button>
+
+    <ul class="list-inline profiles">
+      <li class="profile" ng-repeat="user in users" ng-class="{'removed': user.removed, 'highlighted': user.highlighted}">
+        <img src="{{user.profile_image_url}}"/>
+        <div class="name">
+          <strong>{{user.name}}</strong>
+        </div>
+        <div class="tweet">{{user.tweet}}</div>
+      </li>
+    </ul>
+
+  </div>
+
+</body>
+</html>

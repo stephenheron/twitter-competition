@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.css" />
   <!-- endbower -->
   <link rel="stylesheet" href="/app/css/style.css" />
+  <link rel="stylesheet" href="/app/css/edpug.css" />
 
   <!-- bower:js -->
   <script src="/bower_components/jquery/dist/jquery.js"></script>
@@ -18,23 +19,50 @@
   <script src="/app/js/controllers.js"></script>
 
 </head>
+
 <body ng-space="stop()" ng-controller="TwitterUserCtrl">
 
-  <div class="container">
+    <div id="winner" style='display: none' ng-show='winner'> 
+      <p>WINNER NAME GOES HERE</p>
+    </div>
 
-    <button type="button" ng-click='start()' class="btn btn-primary btn-lg center-block">Start</button>
+    <section id="start-button" class="content-row yellow">
+      <button type="button" ng-click='start()' class="btn btn-primary btn-lg center-block">Start</button>
+    </section>
 
-    <ul class="list-inline profiles">
-      <li class="profile" ng-repeat="user in users" ng-class="{'removed': user.removed, 'highlighted': user.highlighted}">
-        <img src="{{user.profile_image_url}}"/>
-        <div class="name">
-          <strong>{{user.name}}</strong>
+    <section class="content-row blue">
+      <div class="container">
+        <ul class="list-inline profiles">
+          <li class="profile" ng-repeat="user in users" ng-class="{'removed': user.removed, 'highlighted': user.highlighted}">
+            <img src="{{user.profile_image_url}}"/>
+            <div class="name">
+              <strong>{{user.name}}</strong>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <footer>
+      <section class="container">
+        <div class="row">
+          <div class="col-md-6 pull-left">
+            <p>Venue / PHPizza and drinks sponsored by Blonde Digital. Some talks may have their own sponsor.</p>     
+            <p class="line-logo"><a href="http://www.blonde.net/">Sponsored by Blonde Digital</a>, an Edinburgh Digital Agency</p>    
+          </div>
+        <div class="col-md-4 col-md-offset-2">
+      <p>Useful links</p>
+      <ul>
+        <li><a target="_blank" href="http://edpug.eventbrite.com">edPUG on EventBrite</a></li>
+        <li><a target="_blank" href="https://www.facebook.com/groups/50315848110/">edPUG Facebook Group</a></li>
+        <li><a target="_blank" href="https://github.com/edPUG/website">edPUG GitHub Repository</a></li>
+        <li><a target="_blank" href="http://opentechcalendar.co.uk/">Open Tech Calendar</a></li>
+        <li><a target="_blank" href="http://php.net/">php.net</a></li>
+      </ul>
         </div>
-        <div class="tweet">{{user.tweet}}</div>
-      </li>
-    </ul>
-
-  </div>
+      </div>
+      </section>
+    </footer>
 
 </body>
 </html>

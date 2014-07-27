@@ -1,0 +1,602 @@
+/*-------------------------------------------------------
+
+Generic
+
+-------------------------------------------------------*/
+
+body {
+  font-size: 18px;
+  font-family: 'proxima_nova_rgregular', sans-serif;
+  font-weight: normal;
+}
+
+h1, h2, h3, h4 {
+  font-weight: normal;
+}
+
+h1, h2, h3 {
+  text-align: center;
+}
+
+h1, #meetup h2, #expect h2 {
+  font-size: 2.500em;
+  font-family: 'proxima_novasemibold', sans-serif;
+}
+
+h2, h3 {
+  font-size: 2.222em;
+  font-family: 'proxima_novalight', sans-serif;
+}
+h4 {
+    font-size: 1.222em;
+    font-family: 'proxima_novasemibold', sans-serif;
+    margin-bottom: 20px;
+
+}
+h5 {
+    font-size: 1em;
+    font-family: 'proxima_novasemibold', sans-serif;
+}
+hgroup {
+    margin-bottom: 40px;
+}
+
+p {
+    line-height: 1.4em;
+}
+
+.content-row {
+  padding: 60px 0px;
+}
+
+.blue {
+  background-color: #1C84CE;
+  color: #fff;
+}
+
+.yellow {
+  background-color: #e0a801;
+  color: #fff;
+}
+
+.btn {
+  background-image: none;
+  background-color: #1c84ce;
+  border: 0px;
+  color: #fff;
+  box-shadow: none;
+  text-shadow: none;
+  font-size: 1.222em;
+  font-family: 'proxima_novasemibold', sans-serif;
+  text-transform: uppercase;
+  padding: 24px 20px 20px;
+  border-radius: 3px;
+}
+.btn:hover,
+.btn:focus,
+.btn:active {
+  color: #fff;
+  background-color: #0b63a2;
+}
+.book-btn {
+    margin-top: 15px;
+}
+.iconrow {
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+abbr.subtle[title],
+abbr.subtle[data-original-title] {
+  border-bottom: none;
+}
+
+/*-------------------------------------------------------
+
+Fonts
+
+--------------------------------------------------------*/
+
+@font-face {
+    font-family: 'proxima_novablack';
+    src: url('/assets/fonts/proximanova-black-webfont.eot');
+    src: url('/assets/fonts/proximanova-black-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/assets/fonts/proximanova-black-webfont.woff') format('woff'),
+         url('/assets/fonts/proximanova-black-webfont.ttf') format('truetype'),
+         url('/assets/fonts/proximanova-black-webfont.svg#proxima_novablack') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'proxima_nova_rgbold';
+    src: url('/assets/fonts/proximanova-bold-webfont.eot');
+    src: url('/assets/fonts/proximanova-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/assets/fonts/proximanova-bold-webfont.woff') format('woff'),
+         url('/assets/fonts/proximanova-bold-webfont.ttf') format('truetype'),
+         url('/assets/fonts/proximanova-bold-webfont.svg#proxima_nova_rgbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'proxima_nova_rgbold_italic';
+    src: url('/assets/fonts/proximanova-boldit-webfont.eot');
+    src: url('/assets/fonts/proximanova-boldit-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/assets/fonts/proximanova-boldit-webfont.woff') format('woff'),
+         url('/assets/fonts/proximanova-boldit-webfont.ttf') format('truetype'),
+         url('/assets/fonts/proximanova-boldit-webfont.svg#proxima_nova_rgbold_italic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'proxima_nova_condensedlight';
+    src: url('/assets/fonts/proximanovacond-light-webfont.eot');
+    src: url('/assets/fonts/proximanovacond-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/assets/fonts/proximanovacond-light-webfont.woff') format('woff'),
+         url('/assets/fonts/proximanovacond-light-webfont.ttf') format('truetype'),
+         url('/assets/fonts/proximanovacond-light-webfont.svg#proxima_nova_condensedlight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'proxima_nova_condensedLtIt';
+    src: url('/assets/fonts/proximanovacond-lightit-webfont.eot');
+    src: url('/assets/fonts/proximanovacond-lightit-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/assets/fonts/proximanovacond-lightit-webfont.woff') format('woff'),
+         url('/assets/fonts/proximanovacond-lightit-webfont.ttf') format('truetype'),
+         url('/assets/fonts/proximanovacond-lightit-webfont.svg#proxima_nova_condensedLtIt') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'proxima_nova_cn_rgregular';
+    src: url('/assets/stylesheets/proximanovacond-regular-webfont.eot');
+    src: url('/assets/stylesheets/proximanovacond-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/assets/stylesheets/proximanovacond-regular-webfont.woff') format('woff'),
+         url('/assets/stylesheets/proximanovacond-regular-webfont.ttf') format('truetype'),
+         url('/assets/stylesheets/proximanovacond-regular-webfont.svg#proxima_nova_cn_rgregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'proxima_nova_condensedRgIt';
+    src: url('/assets/fonts/proximanovacond-regularit-webfont.eot');
+    src: url('/assets/fonts/proximanovacond-regularit-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/assets/fonts/proximanovacond-regularit-webfont.woff') format('woff'),
+         url('/assets/fonts/proximanovacond-regularit-webfont.ttf') format('truetype'),
+         url('/assets/fonts/proximanovacond-regularit-webfont.svg#proxima_nova_condensedRgIt') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'proxima_nova_condensedSBd';
+    src: url('/assets/fonts/proximanovacond-semibold-webfont.eot');
+    src: url('/assets/fonts/proximanovacond-semibold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/assets/fonts/proximanovacond-semibold-webfont.woff') format('woff'),
+         url('/assets/fonts/proximanovacond-semibold-webfont.ttf') format('truetype'),
+         url('/assets/fonts/proximanovacond-semibold-webfont.svg#proxima_nova_condensedSBd') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'proxima_nova_condensedSBdIt';
+    src: url('/assets/fonts/proximanovacond-semiboldit-webfont.eot');
+    src: url('/assets/fonts/proximanovacond-semiboldit-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/assets/fonts/proximanovacond-semiboldit-webfont.woff') format('woff'),
+         url('/assets/fonts/proximanovacond-semiboldit-webfont.ttf') format('truetype'),
+         url('/assets/fonts/proximanovacond-semiboldit-webfont.svg#proxima_nova_condensedSBdIt') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'proxima_novaextrabold';
+    src: url('/assets/fonts/proximanova-extrabold-webfont.eot');
+    src: url('/assets/fonts/proximanova-extrabold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/assets/fonts/proximanova-extrabold-webfont.woff') format('woff'),
+         url('/assets/fonts/proximanova-extrabold-webfont.ttf') format('truetype'),
+         url('/assets/fonts/proximanova-extrabold-webfont.svg#proxima_novaextrabold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'proxima_novalight';
+    src: url('/assets/fonts/proximanova-light-webfont.eot');
+    src: url('/assets/fonts/proximanova-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/assets/fonts/proximanova-light-webfont.woff') format('woff'),
+         url('/assets/fonts/proximanova-light-webfont.ttf') format('truetype'),
+         url('/assets/fonts/proximanova-light-webfont.svg#proxima_novalight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'proxima_novalight_italic';
+    src: url('/assets/fonts/proximanova-lightitalic-webfont.eot');
+    src: url('/assets/fonts/proximanova-lightitalic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/assets/fonts/proximanova-lightitalic-webfont.woff') format('woff'),
+         url('/assets/fonts/proximanova-lightitalic-webfont.ttf') format('truetype'),
+         url('/assets/fonts/proximanova-lightitalic-webfont.svg#proxima_novalight_italic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'proxima_novaregular_italic';
+    src: url('/assets/fonts/proximanova-regitalic-webfont.eot');
+    src: url('/assets/fonts/proximanova-regitalic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/assets/fonts/proximanova-regitalic-webfont.woff') format('woff'),
+         url('/assets/fonts/proximanova-regitalic-webfont.ttf') format('truetype'),
+         url('/assets/fonts/proximanova-regitalic-webfont.svg#proxima_novaregular_italic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'proxima_nova_rgregular';
+    src: url('/assets/fonts/proximanova-regular-webfont.eot');
+    src: url('/assets/fonts/proximanova-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/assets/fonts/proximanova-regular-webfont.woff') format('woff'),
+         url('/assets/fonts/proximanova-regular-webfont.ttf') format('truetype'),
+         url('/assets/fonts/proximanova-regular-webfont.svg#proxima_nova_rgregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'proxima_novasemibold';
+    src: url('/assets/fonts/proximanova-semibold-webfont.eot');
+    src: url('/assets/fonts/proximanova-semibold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/assets/fonts/proximanova-semibold-webfont.woff') format('woff'),
+         url('/assets/fonts/proximanova-semibold-webfont.ttf') format('truetype'),
+         url('/assets/fonts/proximanova-semibold-webfont.svg#proxima_novasemibold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'proxima_novasemibold_italic';
+    src: url('/assets/fonts/proximanova-semibolditalic-webfont.eot');
+    src: url('/assets/fonts/proximanova-semibolditalic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/assets/fonts/proximanova-semibolditalic-webfont.woff') format('woff'),
+         url('/assets/fonts/proximanova-semibolditalic-webfont.ttf') format('truetype'),
+         url('/assets/fonts/proximanova-semibolditalic-webfont.svg#proxima_novasemibold_italic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+    @font-face {
+        font-family: 'proxima_nova_rgbold';
+        src: url('/assets/fonts/proximanova-bold-webfont.svg#proxima_nova_rgbold') format('svg');
+        font-weight: normal;
+        font-style: normal;
+
+    }
+
+    @font-face {
+        font-family: 'proxima_novasemibold';
+        src: url('/assets/fonts/proximanova-semibold-webfont.svg#proxima_novasemibold') format('svg');
+        font-weight: normal;
+        font-style: normal;
+    }
+
+    @font-face {
+    font-family: 'proxima_novalight';
+    src: url('/assets/fonts/proximanova-light-webfont.svg#proxima_novalight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+}
+
+/*-------------------------------------------------------
+
+Header
+
+-------------------------------------------------------*/
+header {
+  background-color: #131426;
+  height: 70px;
+  border-bottom: 2px solid #26284d;
+}
+header .navbar-inner {
+  background: none;
+  border: 0px;
+  box-shadow: none;
+  background-color: #131426;
+}
+header.navbar .brand,
+footer .brand p  {
+  color: #fff;
+  margin-top: 20px;
+  text-shadow: none;
+  font-size: 2.1em;
+  font-family: 'proxima_nova_rgbold', sans-serif;
+}
+header.navbar .brand span{
+  color: #F1B809;
+}
+header.navbar .nav > li > a {
+  color: #fff;
+  font-size: 0.889em;
+  font-weight: normal;
+    font-family: 'proxima_novasemibold', sans-serif;
+  text-shadow: none;
+}
+header.navbar .nav > .active > a, 
+header.navbar .nav > li > a:hover,
+header.navbar .nav > li > a:focus,
+header.navbar .nav > .active > a:hover, 
+header.navbar .nav > .active > a:focus {
+  color: #F1B809;
+  backgound-color: transparent;
+  background: none;
+    outline: none;
+}
+
+header .navbar-inner,
+.navbar-fixed-top .navbar-inner {
+    filter: none;
+    border: 0px;
+}
+
+header.navbar .nav {
+  top: 25px;
+}
+
+header.navbar .nav > li.facebook {
+    width: 30px;
+    height:30px;
+    display: block;
+    text-indent: -9999px;
+    margin-top: 4px;
+    background: url("/assets/img/site/icons/facebook.png") no-repeat 0px 0px;
+}
+
+/*-------------------------------------------------------
+
+Masthead
+
+--------------------------------------------------------*/
+.masthead-wrapper {
+  margin-top: 70px;
+  background: url("/assets/img/site/headers/masthead.jpg") repeat-x center top;
+  height:520px;
+  display: block;
+}
+
+/*--------------------------------------------------------
+
+Content rows
+
+--------------------------------------------------------*/
+.content-row  {
+    min-height: 300px;
+}
+
+#meetup .row > div h4:nth-child(2n) {
+    margin-top: 40px;
+}
+
+#speaker {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: block;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+#speaker > img {
+    float: left;
+    border: 3px solid #fff;
+    margin-right: 20px;
+}
+
+#expect .btn {
+    background-color: #fff;
+    color: #1c84ce;
+}
+#expect .btn:hover {
+    background-color: #e0a801;
+    color: #666;
+}
+
+#meetup > div, #expect > div {
+    opacity: 0;
+}
+
+
+#meetup .iconrow {
+    position: relative;
+    background: url("/assets/img/site/headers/meetup-header.png") no-repeat top center;
+    height: 189px;
+}
+#meetup .iconrow .clock-wrapper {
+    position: relative;
+    width: 182px;
+    height: 182px;
+    left: 71px;
+    top: 6px;
+}
+#meetup .iconrow .clock {
+    margin: 0px;
+    background: url("/assets/img/site/animated/clock/clock.jpg") no-repeat 0px 0px;
+    display: block;
+    text-indent: -9999px;
+    width: 182px;
+    height: 182px;
+}
+#meetup .iconrow .clock-arm {
+    background: url("/assets/img/site/animated/clock/clock_arm.png") no-repeat 0px 0px;
+    position: absolute;
+    left: 47.5%;
+    height: 53px;
+    width: 14px;    
+    margin-left: -1px;
+    top: 40px;
+}
+
+#meetup .iconrow .clock-arm.animate {
+    -webkit-animation: rotate 1s 1s linear;
+    -webkit-transform-origin: center bottom;
+    -moz-animation: rotate 1s 1s linear;
+    -moz-transform-origin: center bottom;
+    -ms-animation: rotate 1s 1s linear;
+    -ms-transform-origin: center bottom;
+    -o-animation: rotate 1s 1s linear;
+    -o-transform-origin: center bottom;
+    animation: rotate 1s 1s linear;
+    transform-origin: center bottom;
+}
+
+
+@-webkit-keyframes rotate {
+    0% { -webkit-transform: rotate(0deg);}
+    100% { -webkit-transform: rotate(360deg);}
+}   
+
+@-moz-keyframes rotate {
+    0% { -moz-transform: rotate(0deg);}
+    100% { -moz-transform: rotate(360deg);}
+}   
+
+@-ms-keyframes rotate {
+    0% { -ms-transform: rotate(0deg);}
+    100% { -ms-transform: rotate(360deg);}
+}   
+
+@-o-keyframes rotate {
+    0% { -o-transform: rotate(0deg);}
+    100% { -o-transform: rotate(360deg);}
+}   
+
+@keyframes rotate {
+    0% { transform: rotate(0deg);}
+    100% { transform: rotate(360deg);}
+}   
+
+#contact h4 {
+  margin-bottom: 10px;
+}
+
+#contact p {
+  margin-bottom: 20px;
+}
+
+/*---------------------------------------------------------
+
+Google maps
+
+---------------------------------------------------------*/
+#map-canvas {
+    width: 100%;
+    min-height: 300px;
+    height: 100%;
+}
+
+/* Fixes issue with Google Maps and Bootstrap */
+
+#map-canvas img { 
+  max-width: none;
+}
+
+#map-canvas label { 
+  width: auto; display:inline; 
+} 
+
+/*---------------------------------------------------------
+
+Forms
+
+----------------------------------------------------------*/
+form label {
+    font-size: 1em;
+    font-family: 'proxima_novasemibold', sans-serif;
+    margin-bottom: 10px;
+}
+form label > span {
+    font-size: 1.667em;
+    color: #1c84ce;
+}
+input[type=text],
+input[type=email],
+textarea {
+    min-height: 45px;
+    padding: 10px;
+    border: 1px solid #1c84ce;
+    margin-bottom: 25px;
+}
+
+/*---------------------------------------------------------
+
+Footer
+
+----------------------------------------------------------*/
+
+footer {
+  background-color: #131426;
+  min-height: 200px;
+  color: #fff;
+  padding: 40px 0px;
+}
+footer .brand p {
+    font-size: 1.889em;
+    color: #5f6067;
+}
+
+/*---------------------------------------------------------
+
+Ed The Pug
+
+----------------------------------------------------------*/
+
+#ed-the-pug {
+  position: fixed;
+  bottom: 0%;
+  left: 100%;
+  animation-name: ed-the-pug;
+  animation-duration:2s;
+  animation-timing-function:linear;
+  animation-play-state:running;
+  /* Safari and Chrome: */
+  -webkit-animation-name: ed-the-pug;
+  -webkit-animation-duration: 3s;
+  -webkit-animation-timing-function:linear;
+  -webkit-animation-play-state:running;
+  }
+
+  @keyframes ed-the-pug {
+    0%    { left: 100%; bottom: 0% } 
+    100%  { left: -10%; bottom: 0px } 
+  }
+
+  @-webkit-keyframes ed-the-pug {
+    0%    { left: 100% } 
+    100%  { left: -10% } 
+  }

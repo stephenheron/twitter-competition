@@ -66,30 +66,30 @@ twittercompApp.controller('TwitterUserCtrl', ['$scope', '$timeout', '$interval',
 
       $scope.interval = $interval(function() {
 
-        var nonRemovedUsers = _.filter($scope.users, function(user) {
+        var nonRemovedAndHighlightedUsers = _.filter($scope.users, function(user) {
           if(!user.removed && !user.highlighted) {
             return user;
           }
         });
         
-        var nonHighLightedUsers = _.filter($scope.users, function(user) {
+        var nonRemovedUsers = _.filter($scope.users, function(user) {
           if(!user.removed) {
             return user;
           }
         });
+        
+        _.each($scope.users, function(user) {
+          user.highlighted = false;
+        });
 
-        if(nonHighLightedUsers.length == 1) {
+        if(nonRemovedUsers.length == 1) {
           $interval.cancel($scope.interval);
           $scope.winner = nonRemovedUsers[0];
 
           return;
         }
 
-        _.each($scope.users, function(user) {
-          user.highlighted = false;
-        });
-
-        var user = nonRemovedUsers[Math.floor(Math.random() * nonRemovedUsers.length)];
+        var user = nonRemovedAndHighlightedUsers[Math.floor(Math.random() * nonRemovedAndHighlightedUsers.length)];
         
         user.highlighted = true;
 
@@ -102,7 +102,7 @@ twittercompApp.controller('TwitterUserCtrl', ['$scope', '$timeout', '$interval',
 
       started = false;
 
-      var timeout = randomIntFromInterval(100, 400);
+      var timeout = randomIntFromInterval(400, 700);
       $timeout(function() {
         $interval.cancel($scope.interval);
     

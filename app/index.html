@@ -13,17 +13,23 @@
   <!-- bower:js -->
   <script src="/bower_components/jquery/dist/jquery.js"></script>
   <script src="/bower_components/angular/angular.js"></script>
+  <script src="/bower_components/angular-animate/angular-animate.js"></script>
   <script src="/bower_components/bootstrap/dist/js/bootstrap.js"></script>
   <script src="/bower_components/underscore/underscore.js"></script>
   <!-- endbower -->
   <script src="/app/js/controllers.js"></script>
+  <script src="/app/js/confetti.js"></script>
 
 </head>
 
 <body ng-space="stop()" ng-controller="TwitterUserCtrl">
 
-    <div id="winner" ng-show='winner'> 
-      <p>WINNER NAME GOES HERE</p>
+    <canvas id="confetti" ng-confetti="winner"></canvas>
+
+    <div class="cssFade" id="winner-overlay" ng-show='winner'></div>
+    <div class="cssFade" id="winner" ng-show="winner">
+      <h3>Winner</h3>
+      <img src="{{winner.profile_image_url}}"/>
     </div>
 
     <section id="start-button" class="content-row yellow">

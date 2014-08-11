@@ -1,4 +1,4 @@
-var twittercompApp = angular.module('twittercompApp', []);
+var twittercompApp = angular.module('twittercompApp', ['ngAnimate']);
 
 twittercompApp.directive('ngSpace', function() {
     return function (scope, element, attrs) {

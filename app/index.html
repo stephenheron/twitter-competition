@@ -28,13 +28,30 @@
 
     <div class="cssFade" id="winner-overlay" ng-show='winner'></div>
     <div class="cssFade" id="winner" ng-show="winner">
-      <h3>Winner</h3>
+      <h3>Congratulations</h3>
       <img src="{{winner.profile_image_url}}"/>
+      <div class="winner-bio">
+        <div>
+          <strong>{{winner.name}}</strong>
+        </div>
+        <div>
+          {{winner.text}}
+        </div>
+      </div>
     </div>
 
-    <section id="start-button" class="content-row yellow">
-      <button type="button" ng-click='start()' class="btn btn-primary btn-lg center-block">Start</button>
-    </section>
+    <div id="search-bar">
+      <div class="container">
+        <div class="prize-provider"><em>Prize provided by:</em></div>
+        <div class="jetbrains-wrapper">
+          <img style="margin-top: 15px" src="http://www.edpug.co.uk/assets/img/jetbrains-logo.png">
+        </div>
+        <section id="start-button" class="content-row yellow">
+          <input type="text" class="search-query btn-large" ng-model="hashtag" placeholder="Hashtag...">
+          <button type="button" ng-click='start()' class="btn btn-primary btn-lg">Start</button>
+        </section>
+      </div>
+    </div>
 
     <section class="content-row blue">
       <div class="container">

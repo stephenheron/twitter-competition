@@ -60,8 +60,18 @@ body {
   overflow: auto;
 }
 
+#winner h3 {
+  margin-top: 0;
+}
+
 #winner img {
-  width: 200px;
+  width: 45%;
+  float: left;
+}
+
+.winner-bio {
+  width: 50%;
+  float: right;
 }
 
 .cssFade {
@@ -78,4 +88,39 @@ body {
   position: absolute;
   height: 100%;
   width: 100%;
+}
+
+#search-bar {
+  background-color: #e0a801;
+}
+
+#start-button {
+  float: right;
+  margin-right: 35px;
+}
+
+#start-button input {
+  padding: 11px 19px;
+  font-size: 26px;
+  width: 256px;
+  height: 72px;
+  border-radius: 2px;
+  color: initial;
+  margin-bottom: 0;
+}
+
+#search-bar .jetbrains-wrapper {
+  float: left;
+  margin-top: 30px;
+}
+
+#start-button button {
+  vertical-align: top;
+}
+
+.prize-provider {
+  position: relative;
+  top: 25px;
+  left: 10px;
+  color: white;
 }

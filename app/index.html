@@ -5,20 +5,20 @@
   <title>Twitter Competition</title>
 
   <!-- bower:css -->
-  <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.css" />
+  <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.css" />
   <!-- endbower -->
-  <link rel="stylesheet" href="/app/css/style.css" />
-  <link rel="stylesheet" href="/app/css/edpug.css" />
+  <link rel="stylesheet" href="../app/css/style.css" />
+  <link rel="stylesheet" href="../app/css/edpug.css" />
 
   <!-- bower:js -->
-  <script src="/bower_components/jquery/dist/jquery.js"></script>
-  <script src="/bower_components/angular/angular.js"></script>
-  <script src="/bower_components/angular-animate/angular-animate.js"></script>
-  <script src="/bower_components/bootstrap/dist/js/bootstrap.js"></script>
-  <script src="/bower_components/underscore/underscore.js"></script>
+  <script src="../bower_components/jquery/dist/jquery.js"></script>
+  <script src="../bower_components/angular/angular.js"></script>
+  <script src="../bower_components/angular-animate/angular-animate.js"></script>
+  <script src="../bower_components/bootstrap/dist/js/bootstrap.js"></script>
+  <script src="../bower_components/underscore/underscore.js"></script>
   <!-- endbower -->
-  <script src="/app/js/controllers.js"></script>
-  <script src="/app/js/confetti.js"></script>
+  <script src="../app/js/controllers.js"></script>
+  <script src="../app/js/confetti.js"></script>
 
 </head>
 
@@ -55,7 +55,7 @@
 
     <section class="content-row blue">
       <div class="container">
-        <ul class="list-inline profiles">
+        <ul ng-show="users" class="list-inline profiles">
           <li class="profile" ng-repeat="user in users" ng-class="{'removed': user.removed, 'highlighted': user.highlighted}">
             <img src="{{user.profile_image_url}}"/>
             <div class="name">
@@ -63,7 +63,17 @@
             </div>
           </li>
         </ul>
+
+        <div ng-hide="users || tweetsLoading">
+          <h1>Enter this months hashtag!</h1>
+          <h2>Good Luck</h2>
+        </div>
+
+        <div ng-show="tweetsLoading">
+          <img class="loading-spinner center-block" src="http://www.edpug.co.uk/assets/img/ed-the-pug.png">
+        </div>
       </div>
+
     </section>
 
     <footer>

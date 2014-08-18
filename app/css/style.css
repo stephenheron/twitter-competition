@@ -124,3 +124,16 @@ body {
   left: 10px;
   color: white;
 }
+
+@-webkit-keyframes rotating {
+    from{
+        -webkit-transform: rotate(0deg);
+    }
+    to{
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+.loading-spinner {
+    -webkit-animation: rotating 2s linear infinite;
+}

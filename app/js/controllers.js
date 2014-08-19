@@ -24,19 +24,19 @@ twittercompApp.controller('TwitterUserCtrl', ['$scope', '$timeout', '$interval',
   var firstRun = false
 
   $scope.start = function() {
-    $scope.tweetsLoading = true;
-    if($scope.hashtag) {
+    if($scope.tweetID) {
+      $scope.tweetsLoading = true;
       var request = $http({
         method: "get",
         url: "/entries.json",
         params: {
-          hashtag: $scope.hashtag
+          ids: $scope.tweetID
         }
       });
 
       request.then(handleSuccess, handleFailure);
     } else {
-      alert("Please enter a hashtag!");
+      alert("Please enter a ID!");
     }
 
     function handleSuccess(response) {
@@ -45,7 +45,7 @@ twittercompApp.controller('TwitterUserCtrl', ['$scope', '$timeout', '$interval',
         $scope.users = response.data;
         startGame();  
       } else {
-        alert("Not enough tweets with that hashtag :(");
+        alert("Not enough tweets to play");
       }
     }
 

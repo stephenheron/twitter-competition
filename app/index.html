@@ -47,7 +47,7 @@
           <img style="margin-top: 15px" src="http://www.edpug.co.uk/assets/img/jetbrains-logo.png">
         </div>
         <section id="start-button" class="content-row yellow">
-          <input type="text" class="search-query btn-large" ng-model="hashtag" placeholder="Hashtag...">
+          <input type="text" class="search-query btn-large" ng-model="tweetID" placeholder="Tweet ID...">
           <button type="button" ng-click='start()' class="btn btn-primary btn-lg">Start</button>
         </section>
       </div>
@@ -65,7 +65,7 @@
         </ul>
 
         <div ng-hide="users || tweetsLoading">
-          <h1>Enter this months hashtag!</h1>
+          <h1>Enter this month's Tweet ID!</h1>
           <h2>Good Luck</h2>
         </div>
 

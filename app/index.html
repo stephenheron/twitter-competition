@@ -5,20 +5,22 @@
   <title>Twitter Competition</title>
 
   <!-- bower:css -->
-  <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.css" />
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
   <!-- endbower -->
-  <link rel="stylesheet" href="../app/css/style.css" />
-  <link rel="stylesheet" href="../app/css/edpug.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/edpug.css" />
 
   <!-- bower:js -->
-  <script src="../bower_components/jquery/dist/jquery.js"></script>
-  <script src="../bower_components/angular/angular.js"></script>
-  <script src="../bower_components/angular-animate/angular-animate.js"></script>
-  <script src="../bower_components/bootstrap/dist/js/bootstrap.js"></script>
-  <script src="../bower_components/underscore/underscore.js"></script>
+  <script src="bower_components/jquery/dist/jquery.js"></script>
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/angular-animate/angular-animate.js"></script>
+  <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+  <script src="bower_components/underscore/underscore.js"></script>
   <!-- endbower -->
-  <script src="../app/js/controllers.js"></script>
-  <script src="../app/js/confetti.js"></script>
+  <script src="js/app.js"></script>
+  <!-- TO DO - Remove these 2 files: -->
+  <script src="js/controllers.js"></script>
+  <script src="js/confetti.js"></script>
 
 </head>
 
@@ -29,7 +31,7 @@
     <div class="cssFade" id="winner-overlay" ng-show='winner'></div>
     <div class="cssFade" id="winner" ng-show="winner">
       <h3>Congratulations</h3>
-      <img src="{{winner.profile_image_url}}"/>
+      <img ng-src="{{winner.profile_image_url}}"/>
       <div class="winner-bio">
         <div>
           <strong>{{winner.name}}</strong>
@@ -57,7 +59,7 @@
       <div class="container">
         <ul ng-show="users" class="list-inline profiles">
           <li class="profile" ng-repeat="user in users" ng-class="{'removed': user.removed, 'highlighted': user.highlighted}">
-            <img src="{{user.profile_image_url}}"/>
+            <img ng-src="{{user.profile_image_url}}"/>
             <div class="name">
               <strong>{{user.name}}</strong>
             </div>
